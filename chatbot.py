@@ -13,7 +13,7 @@ if "thread_id" not in st.session_state:
 
 st.set_page_config(page_title="ChatBot", page_icon=":speech_balloon:")
 
-openai.api_key = "sk-proj-c7ptIB9EjfbdVnIGYD27T3BlbkFJrzaa8kpNL5cqotbP0n0s"
+openai.api_key = "sk-proj-XlXWKCgUvABKoq9OzOk7T3BlbkFJekPrYnl7l12v6J0gTOXs"
 
 if st.sidebar.button("Start Chat"):
     st.session_state.start_chat = True
