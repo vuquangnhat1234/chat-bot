@@ -1,9 +1,15 @@
 import openai
 import streamlit as st
 import time
+import os
+from dotenv import load_dotenv
 
-assistant_id = "asst_iqr6EC0RdsUXOHM5lxsaPRC0"
+# Load environment variables from .env
+load_dotenv()
+assistant_id = os.getenv("OPENAI_ASSISTANT_ID")
 
+# Get the API key from the environment variable
+openai.api_key = os.getenv("OPENAI_API_KEY")
 client = openai
 
 if "start_chat" not in st.session_state:
@@ -13,7 +19,7 @@ if "thread_id" not in st.session_state:
 
 st.set_page_config(page_title="ChatBot", page_icon=":speech_balloon:")
 
-openai.api_key = "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"
+
 
 if st.sidebar.button("Start Chat"):
     st.session_state.start_chat = True
